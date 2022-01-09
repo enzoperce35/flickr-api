@@ -3,5 +3,6 @@ class StaticPagesController < ApplicationController
   end
 
   def show
+    @flickr_id = params[:flickr_id]
   end
 end
