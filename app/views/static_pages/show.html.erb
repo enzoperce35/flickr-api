@@ -1,1 +1,7 @@
-
+<% @photos.each do |photo| %>
+  <% id = photo['id'] %>
+  <% server_id = photo['server'] %>
+  <% secret = photo['secret'] %>
+  <% url = "https://live.staticflickr.com/#{server_id}/#{id}_#{secret}.jpg" %>
+  <img src=<%= url %> alt="">
+<% end %>
